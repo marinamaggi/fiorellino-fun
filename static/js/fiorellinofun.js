@@ -40,14 +40,14 @@ function draw() {
    y=y+vy
 
    if(x<0){
-        vx = +1*vx
+        vx = -1*vx
           }
 
    if(x>600){
         vx = -1*vx
             }
    if(y<0){
-       vy = +1*vy
+       vy = -1*vy
           }
 
    if(y>300){
