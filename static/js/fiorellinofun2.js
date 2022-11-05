@@ -1,6 +1,10 @@
 let x 
 let y 
-let d 
+let d
+
+let flowerForRow = 10
+let w = 400
+let cella = w/flowerForRow // 80
 
 
 function fiorellino(x,y,d){
@@ -19,26 +23,28 @@ function fiorellino(x,y,d){
   circle(x,y,d)
 }
 
-function cella(x,y,d){
-  
-  let x3
-  let y3 
-  let d1 
-}
-
 
 function setup() {
-  createCanvas(400,400)
+  createCanvas(w,w)
+  background(0,255,0)
+
+  x = cella/2
+  y = cella/2
+  d = cella/2
+
   
-  x = random(400)
-  y = random(400)
-  d = 40
-  
+
+ 
+
+  // frameRate(2)
 }
 
 function draw() {
    
-   background(0,255,0)
-   fiorellino(x,y,d)
-
+  fiorellino(x,y,d)
+  x = x + cella
+   if(x>w){
+    y = y + cella
+    x = cella/2
+  }
 }
